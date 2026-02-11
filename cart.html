@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="shortcut icon" href="./assets/images/bakery logo chatgpt.png" type="image/x-icon">
+
+    <!-- Link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Pacifico&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- External Css Link -->
+    <link rel="stylesheet" href="./assets/CSS/cart.css">
+
+
+</head>
+
+<body>
+
+     <header>
+        <div class="logo">
+            <h2>Hari Bakery</h2>
+            <p>"One Bite, Full Delight!"</p>
+        </div>
+
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+
+            <div class="cart">
+                <a href="./cart.html" class="cart-icon">
+                    🛒 <span id="cart-count">0</span>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Cart Content -->
+
+    <div class="cart-container">
+
+        <h2 class="cart-header">🛒 Your Cart</h2>
+
+        <div id="cart-items" class="cart-list"></div>
+
+        <!-- Total Box -->
+        <div class="total-box">
+            Total: ₹<span id="total-amount">0</span>
+        </div>
+
+        <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+
+    </div>
+
+
+
+      <footer class="site-footer">
+
+        <p class="copyright">&copy Hari Bakery. 💖 Excellence in Every Bite.</p>
+
+        <span class="footer-icons">
+
+            <a href="#"><i class="fa-brands fa-facebook fa-bounce" style="color: #edebf3;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-bounce" style="color: #edebf3;"></i></a>
+
+        </span>
+
+        <section class="location">
+            <div>
+                <h3>Tamil Nadu</h3>
+                <p>Ranipettai Disrict</p>
+                <p><i class="fa fa-map-marker-alt" style="font-size: 14px;"></i> Walajapet, Sholinghur T.k</p>
+                <p>-632 501</p>
+            </div>
+
+            <div>
+                <h3>HOURS</h3>
+                <p><strong>Monday - Friday:</strong> 8.00 am - 8.30 pm</p>
+                <p>Kitchen Closes at 2.00 pm</p>
+                <p><strong>Saturday - Sunday:</strong>8.00am - 7.00 pm</p>
+            </div>
+        </section>
+
+    </footer>
+
+
+
+    <script src="./assets/Script/cart.js"></script>
+
+</body>
+
+</html>

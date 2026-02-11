@@ -1,0 +1,397 @@
+:root {
+    font-family: "Sansita", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    --orange: #FA812F;
+    --darkviolet: #0D1164;
+    --bluegrey: #273F4F;
+    --liteblack: #414143;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header{
+    background-color: #eaeaed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo {
+    background-color: var(--orange);
+    color: var(--liteblack);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logo > h2{
+    margin: 0;
+    font-size: 24px;
+}
+
+.logo p{
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Navbar */
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav > a{
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #4b0082;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+nav > a:hover{
+    color: #4c52c4;
+}
+
+/* Cart Icon */
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange);
+    color: #fff;
+    padding: 8x 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+    font-size: 18px;
+}
+
+.cart:hover{
+    background-color: #ffa726;
+    transform: scale(1.1);
+}
+
+#cart-count{
+    background-color: red;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.cart-icon{
+    text-decoration: none;
+}
+
+/* Cart Container Styling */
+
+.cart-container{
+    width: 60%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    font-family: "Alan Sans", sans-serif;
+}
+
+.cart-header{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.cart-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+}
+
+.cart-item:hover{
+    transform: scale(1.02);
+}
+
+.cart-item img{
+    width: 85px;
+    height: 85px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.item-details{
+    flex: 1;
+}
+
+.item-details h3{
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+.item-details p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.qty-box{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-btn{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: #e8e8e8;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.qty-btn:hover{
+    background: #d5d5d5;
+}
+
+.qty-number{
+    min-width: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.remove-btn{
+    background: #ff5353;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-btn:hover{
+    background: #d90404;
+}
+
+.total-box{
+    text-align: right;
+    font-size: 28px;
+    margin-top: 35px;
+    font-weight: 800;
+    padding: 15px 0;
+    border-top: 2px dashed #ddd;
+}
+
+.checkout-btn{
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 18px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover{
+    background: #218838;
+}
+
+
+/* Footer Styling */
+
+.site-footer{
+    width: 100%;
+}
+
+.copyright {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 15px;
+    text-align: center;
+    background-color: #242323;
+    color: #eaeaed;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+}
+
+.footer-icons {
+    margin: 0;
+    padding: 15px;
+    background-color: #1c1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons a {
+    font-size: 35px;
+    margin: 0 10px;
+}
+
+.location {
+    background-color: #0b0b0b;
+    color: #eaeaed;
+    display: flex;
+    height: 35vh;
+}
+
+.location div {
+    margin: 20px 200px;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+}
+
+
+
+
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* HEADER */
+  header {
+    padding: 10px 40px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  /* CART CONTAINER */
+  .cart-container {
+    width: 80%;
+    padding: 25px;
+  }
+
+  .cart-header {
+    font-size: 30px;
+  }
+
+  /* CART ITEM */
+  .cart-item img {
+    width: 75px;
+    height: 75px;
+  }
+
+  /* FOOTER */
+  .location {
+    height: auto;
+  }
+
+  .location div {
+    margin: 20px 60px;
+  }
+}
+
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* CART CONTAINER */
+  .cart-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .cart-header {
+    font-size: 26px;
+  }
+
+  /* CART ITEM */
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .item-details h3 {
+    font-size: 18px;
+  }
+
+  .item-details p {
+    font-size: 14px;
+  }
+
+  /* TOTAL */
+  .total-box {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .location {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .location div {
+    margin: 15px 20px;
+    text-align: center;
+  }
+
+  .footer-icons a {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Hari Bakery</title>
+    <link rel="shortcut icon" href="./assets/images/bakery logo chatgpt.png" type="image/x-icon">
+
+    <!-- Link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Pacifico&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Extrenal Css Link -->
+    <link rel="stylesheet" href="./assets/CSS/about.css">
+</head>
+
+<body>
+
+    <div class="panel" id="categoryPanel">
+        <button id="closePanel" class="close-btn">&times;</button>
+        <h2>Order Categories</h2>
+
+        <ul class="cat-list">
+            <li><a href="menu.html#cakes">Cakes</a></li>
+            <li><a href="menu.html#puffs">Puffs</a></li>
+            <li><a href="menu.html#breads">Breads</a></li>
+            <li><a href="menu.html#snacks">Snacks</a></li>
+
+            <li class="dropdown">
+                <button class="drop-btn">Drinks ▾</button>
+                <ul class="dropdown-content">
+                    <li><a href="menu.html#hot-drinks">Hot Drinks</a></li>
+                    <li><a href="menu.html#cool-drinks">Cool Drinks</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+
+    </div>
+
+
+    <header>
+        <div class="logo">
+            <h2>Hari Bakery</h2>
+            <p>"One Bite, Full Delight!"</p>
+        </div>
+
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+
+            <div class="cart">
+                <a href="./cart.html" class="cart-icon">
+                    🛒 <span id="cart-count">0</span>
+                </a>
+            </div>
+
+            <button id="openCategoryBtn" class="order-btn" onclick="openPanel()">ORDER ONLINE</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero-section">
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="./assets/images/about img2.jpg" style="width: 100%">
+                    <h1>About</h1>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./assets/images/About img.webp" style="width: 100%;">
+                    <h1>About</h1>
+                </div>
+
+            </div>
+            <!-- <div>
+                <img src="./assets/images/about img2.jpg" alt="">
+                <h1>About</h1>
+            </div> -->
+        </section>
+
+        <div class="hero-para">
+            <h2>Hari Bakery</h2>
+            <p>Hari Bakery is a seasonal cafe and marketplace featuring fresh baked goods in Ranipettai D.T, run by
+                Pastry Chef/Baker Prasanth and Dhiva. Longtime champions of produce-driven cooking, Prasanth and Dhiva
+                built their careers over fifteen years in renowned kitchens of Ranipet(including, Lucques, Csmpsnile,
+                and Cooks County) before opening Hari Bakery.</p>
+            <p>At Hari Bakery, they continue their dedication to hand made food with artisan breads and pastries made
+                daily with locally-sourced, heirloom grains, as well as a produce forward day-time menu.</p>
+
+            <a href="#" class="hero-btn"><button>ORDER ONLINE</button></a>
+
+        </div>
+
+        <section class="image-section">
+
+            <div class="image-container">
+                <img src="./assets/images/salad.avif" alt="">
+                <div class="overlay"></div>
+            </div>
+
+            <div class="image-container">
+                <img src="./assets/images/holes pastry.avif" alt="">
+                <div class="overlay"></div>
+            </div>
+
+            <div class="image-container">
+                <img src="./assets/images/about img1.avif" alt="">
+                <div class="overlay"></div>
+            </div>
+
+            <div class="image-container">
+                <img src="./assets/images/4 plate dish.avif" alt="">
+                <div class="overlay"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <p class="copyright">&copy Hari Bakery. 💖 Excellence in Every Bite.</p>
+
+        <span class="footer-icons">
+
+            <a href="#"><i class="fa-brands fa-facebook fa-bounce" style="color: #edebf3;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-bounce" style="color: #edebf3;"></i></a>
+
+        </span>
+
+        <section class="location">
+            <div>
+                <h3>Tamil Nadu</h3>
+                <p>Ranipettai Disrict</p>
+                <p><i class="fa fa-map-marker-alt" style="font-size: 14px;"></i> Walajapet, Sholinghur T.k</p>
+                <p>-632 501</p>
+            </div>
+
+            <div>
+                <h3>HOURS</h3>
+                <p><strong>Monday - Friday:</strong> 8.00 am - 8.30 pm</p>
+                <p>Kitchen Closes at 2.00 pm</p>
+                <p><strong>Saturday - Sunday:</strong>8.00am - 7.00 pm</p>
+            </div>
+        </section>
+
+    </footer>
+
+    <script src="./assets/Script/about.js"></script>
+
+
+</body>
+
+</html>

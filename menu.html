@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus - Hari Bakery</title>
+    <link rel="shortcut icon" href="./assets/images/bakery logo chatgpt.png" type="image/x-icon">
+</head>
+
+<!-- Link google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Pacifico&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+<!-- Font Awesome Link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- External Css -->
+<link rel="stylesheet" href="./assets/CSS/menu.css">
+
+<body>
+
+    <div class="panel" id="categoryPanel">
+        <button id="closePanel" class="close-btn">&times;</button>
+        <h2>Order Categories</h2>
+
+        <ul class="cat-list">
+            <li><a href="menu.html#cakes">Cakes</a></li>
+            <li><a href="menu.html#puffs">Puffs</a></li>
+            <li><a href="menu.html#breads">Breads</a></li>
+            <li><a href="menu.html#snacks">Snacks</a></li>
+
+            <li class="dropdown1">
+                <button class="drop-btn">Drinks ▾</button>
+                <ul class="dropdown-content1">
+                    <li><a href="menu.html#hot-drinks">Hot Drinks</a></li>
+                    <li><a href="menu.html#cool-drinks">Cool Drinks</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+
+    </div>
+
+
+    <header>
+        <div class="logo">
+            <h2>Hari Bakery</h2>
+            <p>"One Bite, Full Delight!"</p>
+        </div>
+
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+
+            <div class="cart">
+                <a href="./cart.html" class="cart-icon">
+                    🛒 <span id="cart-count">0</span>
+                </a>
+            </div>
+
+            <button id="openCategoryBtn" class="order-btn" onclick="openPanel()">ORDER ONLINE</button>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+
+        <div class="slideshow-container">
+
+            <div class="myslides fade">
+                <img src="./assets/images/menu page slide 4 muffins.jpg" alt="">
+                <h1>Menus</h1>
+            </div>
+
+            <div class="myslides fade">
+                <img src="./assets/images/menu slide2.avif" alt="">
+                <h1>Menus</h1>
+            </div>
+
+            <div class="myslides fade">
+                <img src="./assets/images/menu slide 3.webp" alt="">
+                <h1>Menus</h1>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+        <div class="category-bar">
+            <button class="cat-btn active" onclick="filterMenu('all')">All</button>
+            <button class="cat-btn active" onclick="filterMenu('cakes')">Cakes</button>
+            <button class="cat-btn active" onclick="filterMenu('puffs')">Puffs</button>
+            <button class="cat-btn active" onclick="filterMenu('breads')">Breads</button>
+            <button class="cat-btn active" onclick="filterMenu('snacks')">Snacks</button>
+
+            <!-- Drinks dropdown -->
+            <div class="dropdown">
+                <button class="cat-btn1">Drinks </button>
+                <div class="dropdown-content">
+                    <button class="cat-btn active" onclick="filterMenu('hot-drinks')">Hot Drinks</button>
+                    <button class="cat-btn active" onclick="filterMenu('cool-drinks')">Cool Drinks</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="menu-container">
+
+            <!-- -----------------Cakes---------------- -->
+
+            <div class="category-block" id="cakes" data-category="cakes">
+
+                <h2>Cakes</h2>
+
+                <div class="category-div">
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/1 piece vanilla cream cake.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Vanilla Cream Cake</h3>
+                            <p class="price">₹20 / Piece</p>
+                            <p class="desc">Soft vanilla sponge topped with smooth fresh cream. Light, simple &
+                                evergreen
+                                taste.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/1 piece chocolate cream cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Chocolate Cream Cake</h3>
+                            <p class="price">₹25 / Piece</p>
+                            <p class="desc">Rich chocolate sponge with creamy frosting. Sweet, soft & chocolatey
+                                flavour.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Caramel Custard.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Caramel Custard</h3>
+                            <p class="price">₹40 / cup</p>
+                            <p class="desc">Soft, wobbly caramel dessert with melt-in-mouth texture. Sweet, silky &
+                                smooth.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/carrot cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Carrot Cake</h3>
+                            <p class="price">₹30 / Piece</p>
+                            <p class="desc">Fresh carrot–mixed sponge with mild spice & cream cheese frosting. Soft
+                                &
+                                flavourful.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Cheese cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Cheese Cake</h3>
+                            <p class="price">₹60 / Piece</p>
+                            <p class="desc">Creamy, rich & buttery dessert with smooth cheese texture. Premium sweet
+                                experience.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/coffe panacotta.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Coffee panacotta</h3>
+                            <p class="price">₹50 / cup</p>
+                            <p class="desc">Silky Italian dessert infused with coffee flavour. Mild sweet &
+                                refreshing
+                                finish.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Wheat Cake.JPG" alt="">
+
+                        <div class="mn-details">
+                            <h3>Wheat Cake</h3>
+                            <p class="price">₹120 / Half kg</p>
+                            <p class="desc">Healthy whole wheat sponge with mild sweetness. Light, soft &
+                                guilt-free.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/vanilla sponge cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Vanilla Sponge Cake</h3>
+                            <p class="price">₹100 / Half kg</p>
+                            <p class="desc">Simple plain vanilla sponge. Soft, fluffy & perfect for tea-time.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/tutty fruity cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Tutty fruity Cake</h3>
+                            <p class="price">₹20 / Piece</p>
+                            <p class="desc">Sweet vanilla sponge mixed with colourful fruity bits. Soft, light &
+                                tasty.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/White foresting cake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>White Forest</h3>
+                            <p class="price">₹400 (Half kg)</p>
+                            <p class="desc">Vanilla sponge with whipped cream & cherry mix. Light, fresh & smooth
+                                flavour.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Wedding Cake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Wedding Cake</h3>
+                            <p class="price">₹1200 (Starting)</p>
+                            <p class="desc">Elegant multi-tier cake with soft sponge & premium cream. Designed for
+                                grand
+                                events.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/1 kg Red Velvet Cake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Red Velvet Cake</h3>
+                            <p class="price">₹500 (Half kg)</p>
+                            <p class="desc">Moist red sponge with mild cocoa taste & creamy frosting. Premium
+                                flavour
+                                feel.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Black forest cake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Black Forest</h3>
+                            <p class="price">₹450 / (Half kg)</p>
+                            <p class="desc">Chocolate sponge with whipped cream & cherry bites. Classic taste &
+                                super
+                                soft.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/barbie cake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Barbie Cake</h3>
+                            <p class="price">₹650 (Strating)</p>
+                            <p class="desc">Beautiful themed doll cake with soft sponge & cream layers. Kids
+                                birthday
+                                favourite.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Doreman Cake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Doreman Cake</h3>
+                            <p class="price">₹600 (Starting)</p>
+                            <p class="desc">Cute cartoon theme cake with soft sponge & cream. Kids’ most loved
+                                design.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Fondant Cake.avif" alt="">
+
+                        <div class="mn-details">
+                            <h3>Fondant Cake</h3>
+                            <p class="price">₹900 (Starting)</p>
+                            <p class="desc">Smooth fondant-covered custom design cake. Perfect for parties &
+                                celebration
+                                themes.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Heart shape cake.png" alt="">
+
+                        <div class="mn-details">
+                            <h3>Heart Shape Cake</h3>
+                            <p class="price">₹450 (Half kg)</p>
+                            <p class="desc">Romantic heart-shaped soft cream cake. Ideal for birthdays &
+                                anniversaries.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Kitkat Chocolate cake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Kitkat Chocolate Cake</h3>
+                            <p class="price">₹550 (Half kg)</p>
+                            <p class="desc">Soft chocolate cake covered with KitKat bars. Crunchy, chocolatey &
+                                super
+                                tasty.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Oreo Chocolate cake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Oreo Chocolate Cake</h3>
+                            <p class="price">₹500 (Half kg)</p>
+                            <p class="desc">Chocolate sponge mixed with Oreo crumbs & cream. Crunchy Oreo flavour in
+                                every
+                                bite.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Rainbow Cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Rainbow Cake</h3>
+                            <p class="price">₹450 (Half kg)</p>
+                            <p class="desc">Colourful layered cake with vanilla cream. Soft, bright & celebration
+                                special.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cakes">
+                        <img src="./assets/images/menu images/Cakes/Shinsham cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Shinshan Drawing Cake</h3>
+                            <p class="price">₹600 (Starting)</p>
+                            <p class="desc">Hand-drawn Shinchan design with smooth cream finish. Kids’ favourite fun
+                                cake.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ------------------Snacks-------------- -->
+
+            <div class="category-block" id="snacks" data-category="snacks">
+
+                <h2>Snacks</h2>
+
+                <div class="category-div">
+
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Butter biscuit.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Butter Biscuit</h3>
+                            <p class="price">₹50 (100g)</p>
+                            <p class="desc">Pure butter-rich, soft-crunch biscuits that melt smoothly with tea or milk.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Coconut biscuit.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Coconut Biscuit</h3>
+                            <p class="price">₹50 (100g)</p>
+                            <p class="desc">Soft, chewy biscuits packed with natural coconut flakes. Aroma and taste
+                                super!</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Jeera Biscuits.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Jeera Biscuit</h3>
+                            <p class="price">₹35 (100g)</p>
+                            <p class="desc">Cumin–flavoured crispy biscuits with salty, aromatic taste. Tea lovers’
+                                favorite.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Karachi Biscuits.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Karachi Biscuit</h3>
+                            <p class="price">₹90 (100g)</p>
+                            <p class="desc">Hyderabad-style famous fruity & crunchy biscuits with rich butter aroma.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Salt biscuits.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Salt Biscuit</h3>
+                            <p class="price">₹35 (100g)</p>
+                            <p class="desc">Hand-drawn Shinchan design with smooth cream finish. Kids’ favourite fun
+                                cake.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Sugar biscuits.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Sugar Biscuit</h3>
+                            <p class="price">₹40 (100g)</p>
+                            <p class="desc">Hand-drawn Shinchan design with smooth cream finish. Kids’ favourite fun
+                                cake.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/shrewsberry biscuits.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Shrewsberry Biscuit</h3>
+                            <p class="price">₹80 (100g)</p>
+                            <p class="desc">Classic buttery cookies with a melt-in-mouth texture. Bakery-la best-selling
+                                signature biscuit.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Choco chips cookies.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Choco chips Cookies</h3>
+                            <p class="price">₹70 (100g)</p>
+                            <p class="desc">Soft and crunchy cookies loaded with real chocolate chips. Kids kum adults
+                                kum romba pidikkum.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Piped cookies.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Piped Cookies</h3>
+                            <p class="price">₹60 (100g)</p>
+                            <p class="desc">Hand-drawn Shinchan design with smooth cream finish. Kids’ favourite fun
+                                cake.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Tart shell.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Tart Shell</h3>
+                            <p class="price">₹120 (10 pcs)</p>
+                            <p class="desc">Crispy, buttery tart bases ready for filling. Pastry & fruit toppings ku
+                                ideal.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Wheat Rusk.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Wheat Rusk</h3>
+                            <p class="price">₹45 (200g)</p>
+                            <p class="desc">Healthy whole-wheat rusks with extra crunch. Evening tea or coffee ku
+                                perfect combo.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Biscuits/Milk Rusk.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Milk Rusk</h3>
+                            <p class="price">₹40 (200g)</p>
+                            <p class="desc">Soft bread slices double-baked for perfect crispiness and a rich milky
+                                flavor. Tea time ku super hit!</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <!-- pastries -->
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/vanilla cup cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Vanilla cup Cake</h3>
+                            <p class="price">₹30 / Piece</p>
+                            <p class="desc">Soft and simple vanilla cupcake with whipped cream topping.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/red velvet cup cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Red Velvet cup Cake</h3>
+                            <p class="price">₹40 / Piece</p>
+                            <p class="desc">Moist red velvet base topped with velvety cream cheese frosting.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/chocolate cup cake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Chocolate cup Cake</h3>
+                            <p class="price">₹35 / Piece</p>
+                            <p class="desc">Classic chocolate cupcake with smooth choco frosting.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/BitterScotch cup cake.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Butterscoth cup Cake</h3>
+                            <p class="price">₹35 / Piece</p>
+                            <p class="desc">Soft cupcake topped with creamy butterscotch frosting.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Oreo  cupcake.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Oreo cup Cake</h3>
+                            <p class="price">₹35 / Piece</p>
+                            <p class="desc">Chocolate cupcake topped with Oreo cream frosting.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Brownie Cake.webp" alt="">
+                        <div class="mn-details">
+                            <h3>Brownie</h3>
+                            <p class="price">₹45 / Piece</p>
+                            <p class="desc">Dense and fudgy chocolate brownie with a rich taste.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Butterscotch muffins.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Butterscotch Muffins</h3>
+                            <p class="price">₹35 / Piece</p>
+                            <p class="desc">Soft muffin with sweet butterscotch flavour and caramel bits.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Choco chips muffins.webp" alt="">
+                        <div class="mn-details">
+                            <h3>Choco chips Muffins</h3>
+                            <p class="price">₹35 / Piece</p>
+                            <p class="desc">Vanilla muffin loaded with crunchy chocolate chips.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Chocolate-Muffins.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Chocolate Muffins</h3>
+                            <p class="price">₹30 / Piece</p>
+                            <p class="desc">Moist, rich chocolate-flavoured muffin.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Coffee-Cake-Muffins.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Coffee Muffins</h3>
+                            <p class="price">₹30 / Piece</p>
+                            <p class="desc">Soft muffin with bold coffee flavour and aroma.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Cream Roll.webp" alt="">
+                        <div class="mn-details">
+                            <h3>Cream Roll</h3>
+                            <p class="price">₹20 / Piece</p>
+                            <p class="desc">Crisp roll shell filled with smooth vanilla cream.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Strawberry-Donuts.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Strawberry Donuts</h3>
+                            <p class="price">₹35 / Piece</p>
+                            <p class="desc">Fluffy donut coated with a sweet strawberry glaze.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Chocolate Donut.webp" alt="">
+                        <div class="mn-details">
+                            <h3>Chocolate Donuts</h3>
+                            <p class="price">₹35 / Piece</p>
+                            <p class="desc">Soft ring donut dipped in rich chocolate glaze.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Butter Croissant.webp" alt="">
+                        <div class="mn-details">
+                            <h3>Butter Croissant</h3>
+                            <p class="price">₹45 / Piece</p>
+                            <p class="desc">Classic light, buttery croissant baked to golden perfection.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Chocolate croissant.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Chocolate Croissant</h3>
+                            <p class="price">₹60 / Piece</p>
+                            <p class="desc">Golden croissant stuffed with sweet chocolate filling.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Cheese Croissant.webp" alt="">
+                        <div class="mn-details">
+                            <h3>Cheese Croissant</h3>
+                            <p class="price">₹55 / Piece</p>
+                            <p class="desc">Flaky buttery layers filled with melted cheese.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Chocolate puff pastry.webp" alt="">
+                        <div class="mn-details">
+                            <h3>Choco Pastry</h3>
+                            <p class="price">₹50 / Piece</p>
+                            <p class="desc">Rich chocolate sponge filled with smooth chocolate ganache.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="./assets/images/menu images/Pastries/Strawberry pastry.jpg" alt="">
+                        <div class="mn-details">
+                            <h3>Strawberry Pastry</h3>
+                            <p class="price">₹45 / Piece</p>
+                            <p class="desc">Soft vanilla sponge layered with fresh strawberry cream.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- --------------Puffs--------------- -->
+
+            <div class="category-block" id="puffs" data-category="puffs">
+
+                <h2>Puffs</h2>
+
+                <div class="category-div">
+
+                    <div class="menu-item" data-category="puffs">
+                        <img src="./assets/images/menu images/Puffs/Veg Puff.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Veg Puffs</h3>
+                            <p class="price">₹15 / Piece</p>
+                            <p class="desc">Crispy golden puff filled with mildly spiced mixed vegetables for a
+                                perfect
+                                snack bite.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="puffs">
+                        <img src="./assets/images/menu images/Puffs/paneer-puff.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Panner Puffs</h3>
+                            <p class="price">₹20 / Piece</p>
+                            <p class="desc">Flaky puff pastry stuffed with soft paneer cubes cooked in a rich,
+                                flavorful
+                                masala.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="puffs">
+                        <img src="./assets/images/menu images/Puffs/Egg puff.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Egg Puffs</h3>
+                            <p class="price">₹20 / Piece</p>
+                            <p class="desc">Layered crispy puff with a boiled egg and aromatic spices baked to
+                                perfection.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="puffs">
+                        <img src="./assets/images/menu images/Puffs/Chicken puff.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Chicken Puffs</h3>
+                            <p class="price">₹25 / Piece</p>
+                            <p class="desc">Buttery puff stuffed with tender, masala-coated chicken pieces for a
+                                hearty
+                                treat</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- --------------Breads-------------- -->
+
+            <div class="category-block" id="breads" data-category="breads">
+
+                <h2>Bread and Bun</h2>
+
+                <div class="category-div">
+
+
+                    <div class="menu-item" data-category="breads">
+                        <img src="./assets/images/menu images/Breads/white-bread.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>White Bread</h3>
+                            <p class="price">₹40 / Piece</p>
+                            <p class="desc">Fresh, soft bakery white bread ideal for toast and sandwiches.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="breads">
+                        <img src="./assets/images/menu images/Breads/Wheat Bread.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Wheat bread</h3>
+                            <p class="price">₹45 / Piece</p>
+                            <p class="desc">Healthy whole-wheat bread; soft texture and perfect for sandwiches.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="breads">
+                        <img src="./assets/images/menu images/Breads/Stuffed Bun potato.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Stuffed Bun</h3>
+                            <p class="price">₹30 / Piece</p>
+                            <p class="desc">Soft bun packed with a savoury vegetable masala filling.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="breads">
+                        <img src="./assets/images/menu images/Breads/jam bun.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Jam Bun</h3>
+                            <p class="price">₹20 / Piece</p>
+                            <p class="desc">Classic bun filled with sweet mixed fruit jam for a nostalgic taste.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="breads">
+                        <img src="./assets/images/menu images/Breads/Garlic Bread.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Garlic bread</h3>
+                            <p class="price">₹35 / Piece</p>
+                            <p class="desc">Crispy outer, soft inside; loaded with garlic butter and herbs.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="breads">
+                        <img src="./assets/images/menu images/Breads/Cream Bun.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Cream Bun</h3>
+                            <p class="price">₹20 / Piece</p>
+                            <p class="desc">Freshly baked bun stuffed with rich, whipped vanilla cream.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="breads">
+                        <img src="./assets/images/menu images/Breads/chocolate bun.webp" alt="">
+                        <div class="mn-details">
+                            <h3>Chocolate Bun</h3>
+                            <p class="price">₹25 / Piece</p>
+                            <p class="desc">Soft and fluffy bun filled with smooth, sweet chocolate cream.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ----------------Hot Drinks----------- -->
+
+            <div class="category-block" id="hot-drinks" data-category="hot-drinks">
+
+                <h2>Hot Drinks</h2>
+
+                <div class="category-div">
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/Regular Tea.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Tea</h3>
+                            <p class="price">₹15</p>
+                            <p class="desc">Strong & fresh milk tea with perfect balance of tea flavour and sweetness.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/Black-Tea.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Black Tea</h3>
+                            <p class="price">₹10</p>
+                            <p class="desc">Light, pure tea decoction without milk for a clean refreshing taste.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/ginger-tea.avif" alt="">
+
+                        <div class="mn-details">
+                            <h3>Ginger Tea</h3>
+                            <p class="price">₹20</p>
+                            <p class="desc">Hot tea infused with fresh ginger for a strong aroma & soothing flavour.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/Green Tea.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Green Tea</h3>
+                            <p class="price">₹20</p>
+                            <p class="desc">Healthy light tea made from green tea leaves, smooth & refreshing.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/Lemon Tea.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Lemon Tea</h3>
+                            <p class="price">₹20</p>
+                            <p class="desc">Warm tea mixed with lemon for a tangy, refreshing and light taste.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/Masala-Tea.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Masala Tea</h3>
+                            <p class="price">₹20</p>
+                            <p class="desc">Flavourful tea brewed with Indian spices for a strong aromatic kick.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/Regular Coffee.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Coffee</h3>
+                            <p class="price">₹20</p>
+                            <p class="desc">Classic hot filter coffee with rich aroma and perfect froth.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/Black Coffee.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Black Coffee</h3>
+                            <p class="price">₹15 / Piece</p>
+                            <p class="desc">Strong black coffee without milk for pure coffee lovers.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="hot-drinks">
+                        <img src="./assets/images/menu images/Hot drinks/Badam Milk.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Badam Milk</h3>
+                            <p class="price">₹30</p>
+                            <p class="desc">Hot creamy milk blended with almond paste, saffron & mild sweetness.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ---------------Cool Drinks------------- -->
+
+            <div class="category-block" id="cool-drinks" data-category="cool-drinks">
+
+                <h2>Cool Drinks</h2>
+
+                <div class="category-div">
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/apple-juice.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Apple Juice</h3>
+                            <p class="price">₹60</p>
+                            <p class="desc">Smooth apple blend with a crisp, sweet refreshing flavour.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Grape juice.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Grape Juice</h3>
+                            <p class="price">₹40</p>
+                            <p class="desc">Sweet purple grape extract filled with natural taste.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Orange Juice.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Orange Juice</h3>
+                            <p class="price">₹50</p>
+                            <p class="desc">Freshly squeezed oranges giving a bright citrus flavour.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Pineapple Juice.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Pineapple Juice</h3>
+                            <p class="price">₹40</p>
+                            <p class="desc">Tangy-sweet pineapple blend, super refreshing.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Mango Juice.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Mango Juice</h3>
+                            <p class="price">₹50</p>
+                            <p class="desc">Thick pulpy mango drink with natural fruity sweetness.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Lemon Juice.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Lemon Juice</h3>
+                            <p class="price">₹25</p>
+                            <p class="desc">Fresh lemon squeeze with mild sweetness for instant refreshment.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Chocolate-MilkShake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Chocolate Milkshake</h3>
+                            <p class="price">₹100</p>
+                            <p class="desc">Classic rich chocolate syrup blended with creamy milk & ice cream.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/dry_fruit_milkshake.png" alt="">
+
+                        <div class="mn-details">
+                            <h3>Dry fruit Milkshake</h3>
+                            <p class="price">₹130</p>
+                            <p class="desc">Rich thick milkshake loaded with almonds, cashews, pistachios & dates for a
+                                naturally sweet, energy-packed drink.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Kit-Kat-Milkshake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Kitkat Milkshake</h3>
+                            <p class="price">₹120</p>
+                            <p class="desc">KitKat bars crushed into a rich, crispy choco milkshake.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks//Oreo Milkshake.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Oreo Milkshake</h3>
+                            <p class="price">₹110</p>
+                            <p class="desc">Crunchy Oreo biscuits mixed with thick creamy milkshake for a chocolaty
+                                crunch.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Strawberry-Milkshake.jpg" alt="">
+
+                        <div class="mn-details">
+                            <h3>Strawberry Milkshake</h3>
+                            <p class="price">₹90</p>
+                            <p class="desc">Fresh strawberry blend with chilled milk & ice cream, smooth & sweet.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/Rose falooda.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Rose Falooda</h3>
+                            <p class="price">₹100</p>
+                            <p class="desc">Sweet rose flavour-oda chilled falooda loaded with sabja seeds & ice cream.
+                            </p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                    <div class="menu-item" data-category="cool-drinks">
+                        <img src="./assets/images/menu images/Cool Drinks/royal Falooda.webp" alt="">
+
+                        <div class="mn-details">
+                            <h3>Royal Falooda</h3>
+                            <p class="price">₹120</p>
+                            <p class="desc">Thick creamy falooda with vermicelli, sabja, jelly & ice cream for a perfect
+                                royal treat.</p>
+                        </div>
+                        <button class="add-btn" onclick="addToCart(this)">+ Add</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p class="copyright">&copy Hari Bakery. 💖 Excellence in Every Bite.</p>
+
+        <span class="footer-icons">
+
+            <a href="#"><i class="fa-brands fa-facebook fa-bounce" style="color: #edebf3;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-bounce" style="color: #edebf3;"></i></a>
+
+        </span>
+
+        <section class="location">
+            <div>
+                <h3>Tamil Nadu</h3>
+                <p>Ranipettai Disrict</p>
+                <p><i class="fa fa-map-marker-alt" style="font-size: 14px;"></i> Walajapet, Sholinghur T.k</p>
+                <p>-632 501</p>
+            </div>
+
+            <div>
+                <h3>HOURS</h3>
+                <p><strong>Monday - Friday:</strong> 8.00 am - 8.30 pm</p>
+                <p>Kitchen Closes at 2.00 pm</p>
+                <p><strong>Saturday - Sunday:</strong>8.00am - 7.00 pm</p>
+            </div>
+        </section>
+
+    </footer>
+
+
+    <script src="./assets/Script/menu.js"></script>
+
+</body>
+
+</html>

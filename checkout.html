@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out - Hari Bakery</title>
+    <link rel="shortcut icon" href="./assets/images/bakery logo chatgpt.png" type="image/x-icon">
+
+    <!-- Link Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Pacifico&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- External Css -->
+    <link rel="stylesheet" href="./assets/CSS/checkout.css">
+
+</head>
+
+<body>
+
+    <div class="checkout-container">
+
+        <h2>🧾 Checkout</h2>
+
+        <!-- Order Summary -->
+
+        <div class="summary-box">
+            <h3>Order Summary</h3>
+            <div id="order-items"></div>
+            <hr>
+            <p class="grand-total">
+                Total: ₹<span id="grand-total">0</span>
+            </p>
+        </div>
+
+        <!-- Customer Details -->
+
+        <div class="form-box">
+            <h3>Customer Details</h3>
+
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="tel" id="mobile" placeholder="Mobile Number">
+            <textarea id="address" placeholder="Delivery Address"></textarea>
+
+            <button onclick="placeOrder()">Place Order</button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="./assets/Script/checkout.js"></script>
+
+
+</body>
+
+</html>
